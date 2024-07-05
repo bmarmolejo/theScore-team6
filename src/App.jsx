@@ -1,15 +1,23 @@
-import { useState } from 'react'
-import './App.css'
-import Dashboard from './components/Dashboard/Dashboard'
+import { useState } from "react";
+
+import "./App.scss";
+import Points from "./pages/Points/Points";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WorkoutPage from "./pages/WorkoutPage/WorkoutPage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <Dashboard />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/points" element={<Points />} />
+          <Route path="/workout" element={<WorkoutPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

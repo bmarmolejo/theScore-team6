@@ -1,0 +1,106 @@
+@use "../../styles/partials/variables" as *;
+
+.points {
+  background-color: $bgColor;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__nav-title {
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.5;
+    padding: 0.9375rem;
+  }
+
+  &__body {
+    margin-top: 1.25rem;
+  }
+  &__back-icon {
+    width: auto;
+    height: 12px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 1.3125rem;
+  }
+
+  &__point-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__total-comment {
+    font-size: 16px;
+    opacity: 0.46;
+    font-weight: 700;
+    color: white;
+  }
+
+  &__total {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 60px;
+  }
+  &__team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid $accentColor;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 181px;
+    height: 181px;
+  }
+
+  &__points {
+    width: 201px;
+    background-color: #393c42;
+    border-radius: 8px;
+    height: 3.875rem;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.125rem auto;
+  }
+
+  &__earned {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 70px;
+    text-align: center;
+    left: 40%;
+    color: #0064f8;
+    font-weight: 600;
+  }
+}

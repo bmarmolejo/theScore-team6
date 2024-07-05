@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "team": "Manchester United",
+      "points": 150,
+      "challengesCompleted": [
+        { "id": 1, "title": "Manchester United Trivia", "points": 50 },
+        {
+          "id": 2,
+          "title": "Fitness Challenge: Workout Session",
+          "points": 100
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "team": "Manchester United",
+      "points": 125,
+      "challengesCompleted": [
+        { "id": 1, "title": "Manchester United Trivia", "points": 50 },
+        {
+          "id": 3,
+          "title": "Social Media Challenge: Post a Photo in MU Gear",
+          "points": 75
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "team": "Liverpool",
+      "points": 200,
+      "challengesCompleted": [
+        { "id": 4, "title": "Liverpool Trivia", "points": 100 },
+        { "id": 5, "title": "Fitness Challenge: Run 5k", "points": 100 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "team": "Liverpool",
+      "points": 300,
+      "challengesCompleted": [
+        { "id": 4, "title": "Liverpool Trivia", "points": 100 },
+        {
+          "id": 6,
+          "title": "Social Media Challenge: Post a Photo in Liverpool Gear",
+          "points": 100
+        },
+        { "id": 7, "title": "Liverpool History Quiz", "points": 100 }
+      ]
+    }
+  ],
+  "challenges": [
+    { "id": 1, "title": "Manchester United Trivia", "points": 50 },
+    { "id": 2, "title": "Fitness Challenge: Workout Session", "points": 100 },
+    {
+      "id": 3,
+      "title": "Social Media Challenge: Post a Photo in MU Gear",
+      "points": 75
+    },
+    { "id": 4, "title": "Liverpool Trivia", "points": 100 },
+    { "id": 5, "title": "Fitness Challenge: Run 5k", "points": 100 },
+    {
+      "id": 6,
+      "title": "Social Media Challenge: Post a Photo in Liverpool Gear",
+      "points": 100
+    },
+    { "id": 7, "title": "Liverpool History Quiz", "points": 100 }
+  ],
+  "teams": [
+    {
+      "name": "Manchester United",
+      "points": 275,
+      "members": [
+        { "id": 1, "name": "John Doe" },
+        { "id": 2, "name": "Jane Smith" }
+      ]
+    },
+    {
+      "name": "Liverpool",
+      "points": 500,
+      "members": [
+        { "id": 3, "name": "Michael Johnson" },
+        { "id": 4, "name": "Emily Davis" }
+      ]
+    },
+    {
+      "name": "Chelsea",
+      "points": 400,
+      "members": []
+    }
+  ]
+}

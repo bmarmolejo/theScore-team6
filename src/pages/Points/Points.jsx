@@ -28,7 +28,7 @@ const Points = ({ pointsData, responses }) => {
   return (
     <div className="points">
       <div className="points__nav">
-        <div onclick={handleHome}>
+        <div onClick={handleHome}>
           <img
             className="points__back-icon"
             src={backArrow}

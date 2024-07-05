@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 html {
     font-size: 16px;
 }
@@ -9,38 +11,83 @@ body {
 }
 
 .header {
+    color: white;
+
     .wrapper {
         padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 
-    .header-grid {
+    &__nav {
+        position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    &__nav-title {
+        font-size: 16px;
+        font-weight: 700;
+        opacity: 0.5;
+        padding: 0.9375rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    .header-place,
-    .header-team {
-        font-size: 1.125rem;
-        margin: 0.3125rem 0;
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 1.3125rem;
     }
 
-    .header-points {
-        background-color: #0064F8;
-        display: inline-block; /* Make the box only as wide as the text */
-        padding: 0.25rem 0.5rem; /* Adjust padding for a more compact box */
-        border-radius: 0.3125rem;
+    &__points-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__total-comment {
+        font-size: 16px;
+        opacity: 0.46;
+        font-weight: 700;
         color: white;
-        font-size: 1.125rem;
-        margin: 0.3125rem 0;
+    }
+
+    &__total {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 60px;
+    }
+
+    &__logo {
+        width: 148px;
+        height: 148px;
+        border: solid $accentColor;
+        border-radius: 50%;
+        margin: 0 auto;
     }
 }
 
 .cta,
 .card-small {
     background: #202020;
+    color: white;
     border-radius: 0.3125rem;
-    padding: 0.3125rem;
+    padding: 1rem;
     margin-bottom: 1.25rem;
     text-align: center;
 
@@ -60,18 +107,36 @@ body {
 
     .cta-points {
         background-color: #0064F8;
-        display: inline-block; /* Make the box only as wide as the text */
-        padding: 0.25rem 0.5rem; /* Adjust padding for a more compact box */
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
         border-radius: 0.3125rem;
         color: white;
         font-size: 0.875rem;
         margin-bottom: 0;
+        margin-left: auto;
+    }
+}
+
+.cta-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $accentColor;
     }
 }
 
 .overview {
     .wrapper {
         padding: 1.25rem;
+        text-align: center;
+    }
+
+    h2 {
+        color: white;
+        padding-bottom: 1rem;
     }
 
     .grid {
@@ -89,7 +154,7 @@ body {
 
         .card-small-title {
             font-size: 0.75rem;
-            color: #8b97c6;
+            color: white;
             margin-bottom: 0.3125rem;
         }
 
@@ -130,4 +195,42 @@ body {
 
 .card {
     margin-top: 1.25rem;
+}
+
+.top-card {
+    .wrapper {
+        padding: 1.25rem 2.25rem;
+        text-align: center;
+    }
+
+    h2 {
+        color: white;
+        padding-bottom: 1rem;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .cta {
+        flex: 1 1 auto;
+        max-width: 100%;
+        min-width: 5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .cta-title {
+            font-size: 1rem;
+        }
+
+        .cta-points {
+            margin-top: 0.5rem;
+        }
+    }
 }

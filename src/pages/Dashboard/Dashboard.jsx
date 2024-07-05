@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Dashboard.scss';
 import video from '../../assets/images/video.svg';
 import hashtag from '../../assets/images/hashtag.svg';
 import trivia from '../../assets/images/trivia.svg';
+import teamLogo from '../../assets/images/team-logo.png';
 import up from '../../assets/images/up.png';
 
 // Sample data
@@ -10,6 +12,7 @@ const taskListData = [
     {
         taskName: 'WATCH VIDEO',
         points: 10,
+        link: '/workout',
     },
     {
         taskName: 'COMPLETE TRIVIA',
@@ -43,15 +46,17 @@ const overviewTasks = [
 ];
 
 // TaskCard component
-function TaskCard({ taskName, points }) {
+function TaskCard({ taskName, points, link, onClick }) {
     return (
-        <article className="cta">
-            <p className="cta-title">
-                {taskName}
-            </p>
-            <p className="cta-today cta-points">
-                Total Points: {points}
-            </p>
+        <article className="cta" onClick={() => onClick(points)}>
+            <Link to={link || '#'} className="cta-link">
+                <p className="cta-title">
+                    {taskName}
+                </p>
+                <p className="cta-today cta-points">
+                    Total Points: {points}
+                </p>
+            </Link>
         </article>
     );
 }
@@ -77,22 +82,27 @@ function OverviewCard({ taskName, count, growth, icon }) {
 
 // Dashboard component
 function Dashboard() {
-    const userName = 'Brenda'; 
-    const teamName = 'Toronto Raptors'; 
-    const currentPlace = '4th place'; 
-    const totalPoints = taskListData.reduce((sum, { points }) => sum + points, 0);
+    const initialPoints = 10050;
+    const [totalPoints, setTotalPoints] = useState(initialPoints);
+
+    const handleTaskCompletion = (points) => {
+        setTotalPoints(prevPoints => prevPoints + points);
+    };
 
     return (
-        <div>
+        <div className="dashboard">
             <header className="header">
                 <div className="wrapper">
-                    <div className="header-grid">
-                        <div>
-                            <h1>Your Score</h1>
-                            <p className="header-place">{currentPlace}</p>
-                            <p className="header-team">{teamName}</p>
-                            <p className="header-points">Total Points: {totalPoints}</p> {/* Blue background applied here */}
+                    <div className="header__nav">
+                        <p className="header__nav-title">The Rank</p>
+                    </div>
+                    <div className="header__body">
+                        <h1 className="header__title">Your Score</h1>
+                        <div className="header__points-container">
+                            <p className="header__total-comment">Your total points</p>
+                            <p className="header__total">{totalPoints} pts</p>
                         </div>
+                        <img className="header__logo" src={teamLogo} alt="Team Logo" />
                     </div>
                 </div>
             </header>
@@ -110,9 +120,11 @@ function Dashboard() {
 
             <section className="top-card">
                 <div className="wrapper">
-                    <h2>Tasks</h2> {/* Added Tasks title */}
+                    <h2>Tasks</h2>
                     <div className="grid">
-                        {taskListData.map((taskData, index) => <TaskCard key={index} {...taskData} />)}
+                        {taskListData.map((taskData, index) => (
+                            <TaskCard key={index} {...taskData} onClick={handleTaskCompletion} />
+                        ))}
                     </div>
                 </div>
             </section>

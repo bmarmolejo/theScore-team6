@@ -124,7 +124,7 @@ function Dashboard() {
           </nav>
 
           <div className="header__body">
-            <h1 className="header__title">Your Score</h1>
+            <h1 className="header__title">Hello John!</h1>
             <div className="header__points-container">
               <p className="header__total-comment">Your total points</p>
               <p className="header__total">{formattedPoints} pts</p>

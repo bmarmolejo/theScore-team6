@@ -3,11 +3,7 @@ import backArrow from "../../assets/icons/back-arrow.png";
 import teamLogo from "../../assets/images/team-logo.png";
 import star from "../../assets/images/star.png";
 import chicagoBulls from "../../assets/images/chicago-bulls.png";
-import miamiHeat from "../../assets/images/miami-heat.png";
-import atlantaHawks from "../../assets/images/atlanta-hawks.png";
-import portlandBlazers from "../../assets/images/portland-blazers.png";
-import detroitPistons from "../../assets/images/detroit-pistons.png";
-import washingtonWizards from "../../assets/images/washington-wizards.png";
+import miamiHeat from "../../assets/images/miami-heat.png"
 
 const Leaderboard = () => {
     return (
@@ -31,8 +27,8 @@ const Leaderboard = () => {
                                 <p>2nd place</p>
                             </div>
                             <div className="overview-card__winner-wrapper">
-                                <img src={detroitPistons} className="overview-card--winner" />
-                                <p>Detroit Pistonf</p>
+                                <img src={teamLogo} className="overview-card--winner" />
+                                <p>Toronto Raptors</p>
                                 <p>1st place</p>
                             </div>
                             <div className="overview-card__runners-up-wrapper">
@@ -77,7 +73,7 @@ const Leaderboard = () => {
                             <p>You contributed 200pts </p>
                         </div>
                         <div>
-                            <img src={teamLogo} className="ranking--logo-resize"/>
+                            <img src={star} />
                         </div>
                     </div>
                 </section>
@@ -86,14 +82,14 @@ const Leaderboard = () => {
                         <div>
                             <p>5.</p>
                         </div>
-                        <div className="ranking__card-right-div">
+                        <div>
                             <div>
-                                <p>Atlanta Hawks</p>
+                                <p>Team Crushers</p>
                                 <h2>34,344 Points</h2>
                             </div>
 
                             <div>
-                                <img src={atlantaHawks} className="ranking--logo-resize" />
+                                <img src={star} />
                             </div>
                         </div>
                     </div>
@@ -101,16 +97,16 @@ const Leaderboard = () => {
                         <div>
                             <p>6.</p>
                         </div>
-                        <div className="ranking__card-right-div">
+                        <div>
 
                             <div>
-                                <p>Portland Blazers</p>
+                                <p>Team Eagles</p>
                                 <h2>4,344 Points</h2>
                             </div>
 
 
                             <div>
-                                <img src={portlandBlazers} className="ranking--logo-resize"/>
+                                <img src={star} />
                             </div>
                         </div>
 
@@ -121,13 +117,13 @@ const Leaderboard = () => {
                         </div>
 
 
-                        <div className="ranking__card-right-div">
+                        <div>
                             <div>
-                                <p>Washington Wizards</p>
+                                <p>Team Bears</p>
                                 <h2>344 Points</h2>
                             </div>
                             <div>
-                                <img src={washingtonWizards} className="ranking--logo-resize"/>
+                                <img src={star} />
                             </div>
                         </div>
                     </div>

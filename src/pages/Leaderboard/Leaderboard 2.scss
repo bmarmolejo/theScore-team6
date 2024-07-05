@@ -116,11 +116,6 @@ section h2{
     margin: 8px 0px;
 }
 
-&__card-right-div{
-    display: flex;
-    gap: 16px;
-}
-
 &__card-wrapper--selected{
     display: flex;
     flex-direction: row;
@@ -129,10 +124,5 @@ section h2{
     gap: 16px;
     border-radius: 8px;
     padding: 16px;
-}
-
-&--logo-resize{
-    height: 32px;
-    width: 32px;
 }
 }

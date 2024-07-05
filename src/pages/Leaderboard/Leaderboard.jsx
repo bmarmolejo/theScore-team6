@@ -1,5 +1,6 @@
 import "./Leaderboard.scss";
 import backArrow from "../../assets/icons/back-arrow.png";
+import { Link } from "react-router-dom";
 import teamLogo from "../../assets/images/team-logo.png";
 import star from "../../assets/images/star.png";
 import chicagoBulls from "../../assets/images/chicago-bulls.png";
@@ -9,12 +10,15 @@ import portlandBlazers from "../../assets/images/portland-blazers.png";
 import detroitPistons from "../../assets/images/detroit-pistons.png";
 import washingtonWizards from "../../assets/images/washington-wizards.png";
 
+
 const Leaderboard = () => {
     return (
         <>
             <div className="page-container">
                 <div className="nav-bar">
+                    <Link to="/">
                     <img src={backArrow} className="nav-bar__arrow-icon" />
+                    </Link>
                     <h1 className="nav-bar__title">Ranking</h1>
                     <div></div>
                 </div>
@@ -32,7 +36,7 @@ const Leaderboard = () => {
                             </div>
                             <div className="overview-card__winner-wrapper">
                                 <img src={detroitPistons} className="overview-card--winner" />
-                                <p>Detroit Pistonf</p>
+                                <p>Detroit Pistons</p>
                                 <p>1st place</p>
                             </div>
                             <div className="overview-card__runners-up-wrapper">

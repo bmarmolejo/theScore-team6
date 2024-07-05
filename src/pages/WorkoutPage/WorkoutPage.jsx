@@ -6,10 +6,14 @@ import { useState } from "react";
 
 function WorkoutPage() {
   const [buttonText, setButtonText] = useState("Mark Complete");
-  const [iconImg, setIconImg] = useState(circleIcon);
+    const [iconImg, setIconImg] = useState(circleIcon);
+    const [showElement, setShowElement] = useState(true)
 
-  function handleClick(e) {
-    e.preventDefault();
+    function handlePlay() {
+        setShowElement(false)
+    }
+
+  function handleClick() {
     if (buttonText === "Workout Complete" && iconImg === circleCheck) {
       setButtonText("Mark Complete");
       setIconImg(circleIcon);
@@ -27,10 +31,10 @@ function WorkoutPage() {
 
       <article className="workout-page__videoSection">
         <h2 className="workout-page__video-title">Mitchell's Bicep Workout</h2>
-        
+
         <div className="workout-page__video-container">
-          <p className="workout-page__level">EASY</p>
-          <video
+          {showElement && <p className="workout-page__level">EASY</p>}
+          <video onPlay={handlePlay}
             controls
             poster={videoPoster}
             className="workout-page__video"

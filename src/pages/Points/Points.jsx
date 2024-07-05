@@ -47,8 +47,10 @@ const Points = ({ pointsData, responses }) => {
           <p className="points__earned">{pointsData.users[0].points} pts</p>
         </div>
       </div>
-      <div>
-        <Link to="/leaderboard">Show Leaderboard</Link>
+      <div className="points__leaderboard">
+        <Link className="points__link" to="/leaderboard">
+          Show Leaderboard
+        </Link>
       </div>
     </div>
   );

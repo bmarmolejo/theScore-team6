@@ -18,10 +18,12 @@ const taskListData = [
   {
     taskName: "COMPLETE TRIVIA",
     points: 10,
+    link: "/trivia",
   },
   {
     taskName: "USE HASHTAG",
     points: 10,
+    link: "https://www.instagram.com/explore/tags/torontoraptors/",
   },
 ];
 
@@ -50,7 +52,7 @@ const overviewTasks = [
 function TaskCard({ taskName, points, link, onClick }) {
   return (
     <article className="cta" onClick={() => onClick(points)}>
-      <Link to={link || "#"} className="cta-link">
+      <Link to={link} className="cta-link">
         <p className="cta-title">{taskName}</p>
         <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
       </Link>
@@ -98,8 +100,8 @@ function Dashboard() {
               href="https://www.thescore.com/"
             >
             <img className="header__back-icon" src={backArrow} alt="Back" />
-            <p className="header__nav-title">The Rank</p>
             </a>
+            <p className="header__nav-title">The Rank</p>
           </div>
           <nav className="header__nav-bar">
             <Link

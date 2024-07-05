@@ -1,5 +1,5 @@
 import "./Points.scss";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import backArrow from "../../assets/icons/back-arrow.png";
 import teamLogo from "../../assets/images/team-logo.png";
 import Lottie from "react-lottie";
@@ -20,21 +20,17 @@ const Points = ({ pointsData, responses }) => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const navigate = useNavigate();
-  const handleHome = () => {
-    navigate("/");
-  };
 
   return (
     <div className="points">
       <div className="points__nav">
-        <div onclick={handleHome}>
+        <Link to="/">
           <img
             className="points__back-icon"
             src={backArrow}
             alt="returning icon"
           />
-        </div>
+        </Link>
         <p className="points__nav-title">The Rank</p>
       </div>
       <div className="points__body">
@@ -51,9 +47,9 @@ const Points = ({ pointsData, responses }) => {
           <p className="points__earned">{pointsData.users[0].points} pts</p>
         </div>
       </div>
-      <footer className="points__footer" onClick={handleHome}>
-        <button className="points__button-back"> GO BACK</button>
-      </footer>
+      <div>
+        <Link to="/leaderboard">Show Leaderboard</Link>
+      </div>
     </div>
   );
 };

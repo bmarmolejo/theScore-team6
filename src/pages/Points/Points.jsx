@@ -4,6 +4,8 @@ import backArrow from "../../assets/icons/back-arrow.png";
 import teamLogo from "../../assets/images/team-logo.png";
 import Lottie from "react-lottie";
 import animationData from "../../assets/lotties/confetti.json";
+import { useNavigate } from "react-router-dom";
+
 const Points = ({ pointsData, responses }) => {
   const correctAnswersCount = responses.filter(
     (response) => response.answer === response.correctAnswer

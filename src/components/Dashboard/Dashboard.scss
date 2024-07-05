@@ -1,0 +1,133 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.header {
+    .wrapper {
+        padding: 1.25rem;
+    }
+
+    .header-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-place,
+    .header-team {
+        font-size: 1.125rem;
+        margin: 0.3125rem 0;
+    }
+
+    .header-points {
+        background-color: #0064F8;
+        display: inline-block; /* Make the box only as wide as the text */
+        padding: 0.25rem 0.5rem; /* Adjust padding for a more compact box */
+        border-radius: 0.3125rem;
+        color: white;
+        font-size: 1.125rem;
+        margin: 0.3125rem 0;
+    }
+}
+
+.cta,
+.card-small {
+    background: #202020;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+    .cta-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.3125rem;
+        font-size: 0.875rem;
+    }
+
+    .cta-today {
+        font-size: 0.75rem;
+        color: #1db489;
+        margin-bottom: 0;
+    }
+
+    .cta-points {
+        background-color: #0064F8;
+        display: inline-block; /* Make the box only as wide as the text */
+        padding: 0.25rem 0.5rem; /* Adjust padding for a more compact box */
+        border-radius: 0.3125rem;
+        color: white;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+    }
+}
+
+.overview {
+    .wrapper {
+        padding: 1.25rem;
+    }
+
+    .grid {
+        display: flex;
+        gap: 0.3125rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .card-small {
+        flex: 1 1 calc(33.33% - 0.625rem);
+        max-width: calc(33.33% - 0.625rem);
+        min-width: 5rem;
+        padding: 0.3125rem;
+
+        .card-small-title {
+            font-size: 0.75rem;
+            color: #8b97c6;
+            margin-bottom: 0.3125rem;
+        }
+
+        .card-small-icon {
+            margin: 0.3125rem 0;
+
+            img {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .card-small-number {
+            font-size: 0.875rem;
+        }
+
+        .card-small-percentage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+
+            span {
+                display: flex;
+                align-items: center;
+                color: #1db489;
+                font-size: 0.75rem;
+            }
+
+            img {
+                margin-right: 0.3125rem;
+                width: 0.75rem;
+                height: 0.75rem;
+            }
+        }
+    }
+}
+
+.card {
+    margin-top: 1.25rem;
+}

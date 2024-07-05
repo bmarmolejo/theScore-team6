@@ -18,7 +18,7 @@ const taskListData = [
   {
     taskName: "COMPLETE TRIVIA",
     points: 10,
-    link: "/trivia",
+    link: "/quiz",
   },
   {
     taskName: "USE HASHTAG",
@@ -46,55 +46,29 @@ const overviewTasks = [
     count: 12,
     growth: 15,
   },
-  {
-    taskName: "Videos",
-    icon: video,
-    count: 5,
-    growth: 10,
-  },
-  {
-    taskName: "Trivias",
-    icon: trivia,
-    count: 8,
-    growth: 20,
-  },
-  {
-    taskName: "Hashtags",
-    icon: hashtag,
-    count: 12,
-    growth: 15,
-  },
 ];
 
 // TaskCard component
 function TaskCard({ taskName, points, link, onClick }) {
   return (
     <article className="cta" onClick={() => onClick(points)}>
-      <Link to={link} className="cta-link">
-        <p className="cta-title">{taskName}</p>
-        <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
-      </Link>
+      {link.startsWith("http") ? (
+        <a href={link} className="cta-link" target="_blank" rel="noopener noreferrer">
+          <p className="cta-title">{taskName}</p>
+          <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
+        </a>
+      ) : (
+        <Link to={link} className="cta-link">
+          <p className="cta-title">{taskName}</p>
+          <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
+        </Link>
+      )}
     </article>
   );
 }
 
 // OverviewCard component
 function OverviewCard({ taskName, count, growth, icon }) {
-  return (
-    <div className="card-small">
-      <p className="card-small-title">{taskName}</p>
-      <p className="card-small-icon">
-        <img src={icon} alt="icon" />
-      </p>
-      <p className="card-small-number">{count}</p>
-      <p className="card-small-percentage">
-        <span>
-          <img src={up} alt="up" />
-          {growth}%
-        </span>
-      </p>
-    </div>
-  );
   return (
     <div className="card-small">
       <p className="card-small-title">{taskName}</p>
@@ -129,27 +103,21 @@ function Dashboard() {
       <header className="header">
         <div className="wrapper">
           <div className="header__nav">
-          <a
-              href="https://www.thescore.com/"
-            >
-            <img className="header__back-icon" src={backArrow} alt="Back" />
+            <a href="https://www.thescore.com/">
+              <img className="header__back-icon" src={backArrow} alt="Back" />
             </a>
             <p className="header__nav-title">The Rank</p>
           </div>
           <nav className="header__nav-bar">
             <Link
-              to="/dashboard"
-              className={`header__nav-link ${
-                location.pathname === "/dashboard" ? "active" : ""
-              }`}
+              to="/"
+              className={`header__nav-link ${location.pathname === "/" ? "active" : ""}`}
             >
               Your Score
             </Link>
             <Link
-              to="/ranking"
-              className={`header__nav-link ${
-                location.pathname === "/ranking" ? "active" : ""
-              }`}
+              to="/leaderboard"
+              className={`header__nav-link ${location.pathname === "/leaderboard" ? "active" : ""}`}
             >
               Ranking
             </Link>
@@ -161,9 +129,7 @@ function Dashboard() {
               <p className="header__total-comment">Your total points</p>
               <p className="header__total">{formattedPoints} pts</p>
             </div>
-            <a
-              href="https://www.thescore.com/nba/teams/5"
-            >
+            <a href="https://www.thescore.com/nba/teams/5" target="_blank" rel="noopener noreferrer">
               <img className="header__logo" src={teamLogo} alt="Team Logo" />
             </a>
           </div>
@@ -186,49 +152,13 @@ function Dashboard() {
           </div>
         </div>
       </section>
-      <section className="overview">
-        <div className="wrapper">
-          <h2>Daily Stats</h2>
-          <div className="grid">
-            {overviewTasks.map(({ icon, taskName, count, growth }) => (
-              <OverviewCard
-                key={taskName}
-                icon={icon}
-                taskName={taskName}
-                count={count}
-                growth={growth}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="top-card">
         <div className="wrapper">
           <h2>Tasks</h2>
           <div className="grid">
             {taskListData.map((taskData, index) => (
-              <TaskCard
-                key={index}
-                {...taskData}
-                onClick={handleTaskCompletion}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-      <section className="top-card">
-        <div className="wrapper">
-          <h2>Tasks</h2>
-          <div className="grid">
-            {taskListData.map((taskData, index) => (
-              <TaskCard
-                key={index}
-                {...taskData}
-                onClick={handleTaskCompletion}
-              />
+              <TaskCard key={index} {...taskData} onClick={handleTaskCompletion} />
             ))}
           </div>
         </div>

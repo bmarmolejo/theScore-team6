@@ -3,6 +3,7 @@ import backArrow from "../../assets/icons/back-arrow.png";
 import teamLogo from "../../assets/images/team-logo.png";
 import Lottie from "react-lottie";
 import animationData from "../../assets/lotties/confetti.json";
+import { useNavigate } from "react-router-dom";
 
 const Points = ({ pointsData, responses }) => {
   const correctAnswersCount = responses.filter(
@@ -10,7 +11,6 @@ const Points = ({ pointsData, responses }) => {
   ).length;
 
   console.log("correctAnswersCount", correctAnswersCount);
-
 
   const defaultOptions = {
     loop: false,
@@ -43,16 +43,13 @@ const Points = ({ pointsData, responses }) => {
           <p className="points__total-comment">Your total points</p>
 
           <p className="points__total">{pointsData.teams[0].points} pts</p>
-
         </div>
         <div className="points__team-container">
           <Lottie options={defaultOptions} height={600} width={900} />
           <img className="points__logo" src={teamLogo} />
         </div>
         <div className="points__points">
-
           <p className="points__earned">{pointsData.users[0].points} pts</p>
-
         </div>
       </div>
       <footer className="points__footer" onClick={handleHome}>

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Dashboard.scss";
 import video from "../../assets/images/video.svg";
 import hashtag from "../../assets/images/hashtag.svg";
 import trivia from "../../assets/images/trivia.svg";
 import teamLogo from "../../assets/images/team-logo.png";
 import up from "../../assets/images/up.png";
+import backArrow from "../../assets/icons/back-arrow.png";
 
 // Sample data
 const taskListData = [
@@ -22,6 +23,7 @@ const taskListData = [
   {
     taskName: "USE HASHTAG",
     points: 10,
+    link: "https://www.instagram.com/explore/tags/torontoraptors/",
   },
 ];
 
@@ -50,10 +52,17 @@ const overviewTasks = [
 function TaskCard({ taskName, points, link, onClick }) {
   return (
     <article className="cta" onClick={() => onClick(points)}>
-      <Link to={link || "#"} className="cta-link">
-        <p className="cta-title">{taskName}</p>
-        <p className="cta-today cta-points">Total Points: {points}</p>
-      </Link>
+      {link.startsWith("http") ? (
+        <a href={link} className="cta-link" target="_blank" rel="noopener noreferrer">
+          <p className="cta-title">{taskName}</p>
+          <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
+        </a>
+      ) : (
+        <Link to={link} className="cta-link">
+          <p className="cta-title">{taskName}</p>
+          <p className="cta-today cta-points">TOTAL POINTS: {points}</p>
+        </Link>
+      )}
     </article>
   );
 }
@@ -79,6 +88,7 @@ function OverviewCard({ taskName, count, growth, icon }) {
 
 // Dashboard component
 function Dashboard() {
+  const location = useLocation();
   const initialPoints = 10050;
   const [totalPoints, setTotalPoints] = useState(initialPoints);
 
@@ -86,20 +96,42 @@ function Dashboard() {
     setTotalPoints((prevPoints) => prevPoints + points);
   };
 
+  const formattedPoints = new Intl.NumberFormat().format(totalPoints);
+
   return (
     <div className="dashboard">
       <header className="header">
         <div className="wrapper">
           <div className="header__nav">
+            <a href="https://www.thescore.com/">
+              <img className="header__back-icon" src={backArrow} alt="Back" />
+            </a>
             <p className="header__nav-title">The Rank</p>
           </div>
+          <nav className="header__nav-bar">
+            <Link
+              to="/"
+              className={`header__nav-link ${location.pathname === "/" ? "active" : ""}`}
+            >
+              Your Score
+            </Link>
+            <Link
+              to="/leaderboard"
+              className={`header__nav-link ${location.pathname === "/leaderboard" ? "active" : ""}`}
+            >
+              Ranking
+            </Link>
+          </nav>
+
           <div className="header__body">
-            <h1 className="header__title">Your Score</h1>
+            <h1 className="header__title">Hello John!</h1>
             <div className="header__points-container">
               <p className="header__total-comment">Your total points</p>
-              <p className="header__total">{totalPoints} pts</p>
+              <p className="header__total">{formattedPoints} pts</p>
             </div>
-            <img className="header__logo" src={teamLogo} alt="Team Logo" />
+            <a href="https://www.thescore.com/nba/teams/5" target="_blank" rel="noopener noreferrer">
+              <img className="header__logo" src={teamLogo} alt="Team Logo" />
+            </a>
           </div>
         </div>
       </header>
@@ -126,11 +158,7 @@ function Dashboard() {
           <h2>Tasks</h2>
           <div className="grid">
             {taskListData.map((taskData, index) => (
-              <TaskCard
-                key={index}
-                {...taskData}
-                onClick={handleTaskCompletion}
-              />
+              <TaskCard key={index} {...taskData} onClick={handleTaskCompletion} />
             ))}
           </div>
         </div>

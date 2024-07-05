@@ -4,6 +4,7 @@ import teamLogo from "../../assets/images/team-logo.png";
 import ticketIcon from "../../assets/icons/ticket.png"
 import Lottie from "react-lottie";
 import animationData from "../../assets/lotties/confetti.json";
+import { Link } from "react-router-dom";
 
 export default function PrizePage() {
 
@@ -44,7 +45,7 @@ export default function PrizePage() {
                         <p>Go to your account to claim</p>
                     </div>
                 </div> 
-            <footer className="prize__footer"> GO BACK</footer>   
+            <button className="prize__footer"> GO BACK</button>
             </div>
         </>
     )

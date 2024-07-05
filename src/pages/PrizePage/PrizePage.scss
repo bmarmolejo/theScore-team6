@@ -73,7 +73,6 @@
         }
       }
 
-
     &__rank {
         margin-bottom: 2rem;
 
@@ -94,12 +93,12 @@
             margin: 1rem auto;
         }
     }
-
-
     
     &__footer {
         color: #0064f8;
         font-weight: 600;
         padding-bottom: 2rem;
+        background-color: $bgColor;
+        border: transparent;
       }
 }

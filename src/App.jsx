@@ -1,7 +1,7 @@
 import { useState } from "react";
-
 import "./App.scss";
 import Points from "./pages/Points/Points";
+import PrizePage from "./pages/PrizePage/PrizePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/points" element={<Points />} />
+          <Route path="/prize" element={<PrizePage />} />
         </Routes>
       </BrowserRouter>
     </>

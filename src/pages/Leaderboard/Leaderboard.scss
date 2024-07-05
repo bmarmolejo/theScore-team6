@@ -18,7 +18,7 @@ h1,h2{
 }
 
 p{
-    font-size: 12px;
+    font-size: 10px;
     color: white;
 }
 .nav-bar{
@@ -57,7 +57,16 @@ p{
     
     &--flex{
         display: flex;
+        justify-content: space-around;
         align-items: flex-end;
+        gap: 8px;
+    }
+    
+    &__runners-up-wrapper, &__winner-wrapper{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
     }
 
 
@@ -70,4 +79,19 @@ p{
         height: 60px;
         width: 60px;
     }
+}
+
+
+.top-scores{
+&-card__icon{
+    background-color: rgba(57, 60, 66, 0.8);
+    border-radius: 20px;
+    width: 24px;
+    padding: 4px;
+    height: 24px;
+}
+&-card--flex{
+    display: flex;
+    gap: 16px;
+}
 }

@@ -1,7 +1,7 @@
 import "./Leaderboard.scss";
 import backArrow from "../../assets/icons/back-arrow.png";
-import leaderboardBackdrop from "../../assets/images/leaderboard-backdrop.png";
 import teamLogo from "../../assets/images/team-logo.png";
+import star from "../../assets/images/star.png";
 
 const Leaderboard = () => {
     return (
@@ -42,7 +42,23 @@ const Leaderboard = () => {
 
 
                 </div>
-
+<div>
+    <h2>Top Scores</h2>
+    <div className="top-scores-card--flex">
+    <div>
+        <img className="top-scores-card__icon" src= {star}/>
+        <p>All Time</p>
+    </div>
+    <div>
+        <img className="top-scores-card__icon" src= {star}/>
+        <p>Weekly</p>
+    </div>
+    <div>
+        <img className="top-scores-card__icon" src= {star}/>
+        <p>Category</p>
+    </div>
+    </div>
+</div>
 
 
             </div>

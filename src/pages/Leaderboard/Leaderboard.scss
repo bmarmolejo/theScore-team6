@@ -33,6 +33,7 @@ p{
 
 .overview-card{
     height: 40vh;
+    border-radius: 8px;
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,5 +94,17 @@ p{
 &-card--flex{
     display: flex;
     gap: 16px;
+}
+}
+
+.ranking{
+&__card-wrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 109, 255, 0.55);
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    padding: 8px;
 }
 }

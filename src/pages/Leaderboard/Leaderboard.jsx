@@ -42,7 +42,7 @@ const Leaderboard = () => {
 
 
                 </div>
-<div>
+<section>
     <h2>Top Scores</h2>
     <div className="top-scores-card--flex">
     <div>
@@ -58,7 +58,23 @@ const Leaderboard = () => {
         <p>Category</p>
     </div>
     </div>
-</div>
+</section>
+<section>
+    <h2>Top Scores</h2>
+    <div className="ranking__card-wrapper">
+        <div>
+            <p>4.</p>
+        </div>
+        <div>
+            <p>Current rank</p>
+            <h2>1,034,344 Points</h2>
+            <p>You contributed 200pts </p>
+        </div>
+        <div>
+            <img src={star}/>
+        </div>
+    </div>
+</section>
 
 
             </div>

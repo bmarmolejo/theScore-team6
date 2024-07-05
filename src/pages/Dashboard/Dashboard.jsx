@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import "./Dashboard.scss";
 import video from "../../assets/images/video.svg";
 import hashtag from "../../assets/images/hashtag.svg";
@@ -128,6 +128,7 @@ function Dashboard() {
             <div className="header__points-container">
               <p className="header__total-comment">Your total points</p>
               <p className="header__total">{formattedPoints} pts</p>
+              <NavLink to={"/prize"} className="link"><button className="button">Claim Your Prize</button></NavLink>
             </div>
             <a href="https://www.thescore.com/nba/teams/5" target="_blank" rel="noopener noreferrer">
               <img className="header__logo" src={teamLogo} alt="Team Logo" />

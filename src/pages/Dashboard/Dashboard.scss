@@ -93,7 +93,7 @@
     font-size: 24px;
     font-weight: 700;
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   &__logo {
@@ -256,4 +256,18 @@
       margin-top: 0.5rem;
     }
   }
+}
+
+.link {
+  text-decoration: none;
+  
+}
+
+.button {
+  background-color:$secondaryColor;
+  border: transparent;
+  color: $textcolor;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 40px;
 }

@@ -4,7 +4,7 @@
       "id": 1,
       "name": "John Doe",
       "team": "Manchester United",
-      "points": 150,
+      "points": 1150,
       "challengesCompleted": [
         { "id": 1, "title": "Manchester United Trivia", "points": 50 },
         {
@@ -74,7 +74,7 @@
   "teams": [
     {
       "name": "Manchester United",
-      "points": 275,
+      "points": 10050,
       "members": [
         { "id": 1, "name": "John Doe" },
         { "id": 2, "name": "Jane Smith" }

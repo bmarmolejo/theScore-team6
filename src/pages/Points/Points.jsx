@@ -37,14 +37,14 @@ const Points = ({ pointsData, responses }) => {
         <h1 className="points__title">Congratulations</h1>
         <div className="points__point-container">
           <p className="points__total-comment">Your total points</p>
-          <p className="points__total">{pointsData.teams[0].points} pts</p>
+          <p className="points__total">{pointsData.users[0].points} pts</p>
         </div>
         <div className="points__team-container">
           <Lottie options={defaultOptions} height={600} width={900} />
           <img className="points__logo" src={teamLogo} />
         </div>
         <div className="points__points">
-          <p className="points__earned">{pointsData.users[0].points} pts</p>
+          <p className="points__earned">{pointsData.teams[0].points} pts</p>
         </div>
       </div>
       <div className="points__leaderboard">

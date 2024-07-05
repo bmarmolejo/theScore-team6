@@ -18,18 +18,13 @@ function Quiz() {
       correctAnswer: quiz[currentQuestion].answer,
     };
 
-    console.log(response);
-    if (response) {
-      setResponses([...responses, response]);
-
-      console.log(responses);
-
-      if (currentQuestion + 1 < quiz.length) {
-        setCurrentQuestion(currentQuestion + 1);
-      } else {
-        setShowResult(true);
-        //display result or navigate to points page
-      }
+    console.log("Selected Option:", selectedOption);
+    console.log("Response:", response);
+    setResponses((prevResponses) => [...prevResponses, response]);
+    if (currentQuestion + 1 < quiz.length) {
+      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+    } else {
+      setShowResult(true);
     }
   };
 

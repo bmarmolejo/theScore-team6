@@ -1,16 +1,18 @@
-import React from "react";
+import { useState } from "react";
 
 const Result = ({ responses }) => {
+  const correctAnswersCount = responses.filter(
+    (response) => response.answer === response.correctAnswer
+  ).length;
   return (
     <div className="quiz-result">
-      <h2 className="quiz-result__title">Quiz Result</h2>
-      <ul className="quiz-result__list">
-        {responses.map((response, index) => (
-          <li key={index}>
-            <strong>{response.question}</strong>: {response.answer}
-          </li>
-        ))}
-      </ul>
+      <h2 className="quiz-result__title">
+        <span>Quiz Result</span>
+      </h2>
+      <p>
+        You answered {correctAnswersCount} out of {responses.length} questions
+        correctly.
+      </p>
     </div>
   );
 };

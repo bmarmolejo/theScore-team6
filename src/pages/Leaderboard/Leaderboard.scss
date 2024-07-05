@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
+
 body{
     font-family: "Inter";
     background-color: $bgColor;
@@ -114,6 +115,7 @@ section h2{
     padding: 8px 16px;
     margin: 8px 0px;
 }
+
 &__card-wrapper--selected{
     display: flex;
     flex-direction: row;

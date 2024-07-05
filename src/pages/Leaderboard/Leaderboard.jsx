@@ -83,11 +83,14 @@ const Leaderboard = () => {
                             <p>5.</p>
                         </div>
                         <div>
-                            <p>Team Crushers</p>
-                            <h2>34,344 Points</h2>
-                        </div>
-                        <div>
-                            <img src={star} />
+                            <div>
+                                <p>Team Crushers</p>
+                                <h2>34,344 Points</h2>
+                            </div>
+
+                            <div>
+                                <img src={star} />
+                            </div>
                         </div>
                     </div>
                     <div className="ranking__card-wrapper">
@@ -95,23 +98,33 @@ const Leaderboard = () => {
                             <p>6.</p>
                         </div>
                         <div>
-                            <p>Team Eagles</p>
-                            <h2>4,344 Points</h2>
+
+                            <div>
+                                <p>Team Eagles</p>
+                                <h2>4,344 Points</h2>
+                            </div>
+
+
+                            <div>
+                                <img src={star} />
+                            </div>
                         </div>
-                        <div>
-                            <img src={star} />
-                        </div>
+
                     </div>
                     <div className="ranking__card-wrapper">
                         <div>
                             <p>7.</p>
                         </div>
+
+
                         <div>
-                            <p>Team Bears</p>
-                            <h2>344 Points</h2>
-                        </div>
-                        <div>
-                            <img src={star} />
+                            <div>
+                                <p>Team Bears</p>
+                                <h2>344 Points</h2>
+                            </div>
+                            <div>
+                                <img src={star} />
+                            </div>
                         </div>
                     </div>
                 </section>

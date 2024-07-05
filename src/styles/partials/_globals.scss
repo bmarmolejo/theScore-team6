@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/variables' as *;
 
@@ -13,11 +12,3 @@ body {
     font-weight: 400;
     background-color: $bgColor;
 }
-=======
-@use "variables" as *;
-@use "typography" as *;
-
-body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
-}
->>>>>>> develop

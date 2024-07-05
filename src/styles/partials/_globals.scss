@@ -1,12 +1,14 @@
-@use "../partials/typography" as *;
-@use "../partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 body {
   font-family: $font-family;
+  font-weight: 400;
+  background-color: $bgColor;
 }

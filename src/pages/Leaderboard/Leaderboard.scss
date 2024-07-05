@@ -8,8 +8,10 @@ body{
 
 .page-container{
     background-color: $bgColor;
-    // color: rgba(255, 255, 255, 0.50);
     margin: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 h1,h2{
@@ -20,6 +22,10 @@ h1,h2{
 p{
     font-size: 10px;
     color: white;
+}
+
+section h2{
+    margin-bottom: 8px;
 }
 .nav-bar{
     display: flex;
@@ -32,7 +38,7 @@ p{
 }
 
 .overview-card{
-    height: 40vh;
+    height: 35vh;
     border-radius: 8px;
     background-color: transparent;
     background-position: center;

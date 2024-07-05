@@ -1,14 +1,14 @@
-@use '../../styles/partials/typography' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 * {
-    box-sizing: border-box;
-    margin: 0rem;
-    padding: 0rem;
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 body {
-    font-family: 'Inter'; 
-    font-weight: 400;
-    background-color: $bgColor;
+  font-family: $font-family;
+  font-weight: 400;
+  background-color: $bgColor;
 }

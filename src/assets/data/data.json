@@ -93,5 +93,47 @@
       "points": 400,
       "members": []
     }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "question": "Who is the all-time leading scorer for the Toronto Raptors?",
+      "options": ["Vince Carter", "Chris Bosh", "DeMar DeRozan", "Kyle Lowry"],
+      "answer": "DeMar DeRozan"
+    },
+    {
+      "id": 2,
+      "question": "In which year did the Toronto Raptors win their first NBA Championship?",
+      "options": ["2017", "2018", "2019", "2020"],
+      "answer": "2019"
+    },
+    {
+      "id": 3,
+      "question": "Which player famously hit the series-winning shot in Game 7 against the Philadelphia 76ers in 2019?",
+      "options": [
+        "Kawhi Leonard",
+        "Kyle Lowry",
+        "Pascal Siakam",
+        "Fred VanVleet"
+      ],
+      "answer": "Kawhi Leonard"
+    },
+    {
+      "id": 4,
+      "question": "Who is the current head coach of the Toronto Raptors?",
+      "options": ["Dwane Casey", "Nick Nurse", "Erik Spoelstra", "Steve Kerr"],
+      "answer": "Nick Nurse"
+    },
+    {
+      "id": 5,
+      "question": "Which player won the NBA Finals MVP award for the Raptors' 2019 championship?",
+      "options": [
+        "Kawhi Leonard",
+        "Pascal Siakam",
+        "Kyle Lowry",
+        "Fred VanVleet"
+      ],
+      "answer": "Kawhi Leonard"
+    }
   ]
 }

@@ -6,10 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import WorkoutPage from "./pages/WorkoutPage/WorkoutPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Quiz from "./components/Quiz/Quiz";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <BrowserRouter>
@@ -18,8 +17,8 @@ function App() {
           <Route path="/leaderboard" element={<Leaderboard/>}/>
           <Route path="/prize" element={<PrizePage />} />
           <Route path="/workout" element={<WorkoutPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Routes>
       </BrowserRouter>
     </>

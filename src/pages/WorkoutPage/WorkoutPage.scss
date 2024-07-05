@@ -1,149 +1,147 @@
-
-
-@use '../../styles/partials/globals' as *;
-@use '../../styles/partials/typography' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .workout-page {
+  &__header {
+    display: flex;
+    padding: 2rem 1rem 2.3rem 1rem;
+    justify-content: space-between;
+  }
 
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 
-    &__points {
-        color: white;
-        font-size: 0.875rem;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
+  &__points {
+    color: white;
+    font-size: 0.875rem;
+  }
+
+  &__num-points {
+    background: $accentColor;
+    padding: 0 0.25rem;
+    border-radius: 4px;
+  }
+
+  &__title {
+    color: whitesmoke;
+    padding-top: 1rem;
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__videoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__video-title {
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+    align-self: flex-start;
+    padding: 1.25rem 0;
+  }
+
+  &__video-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__level {
+    position: absolute;
+    color: whitesmoke;
+    left: 2rem;
+    top: 1rem;
+
+    background: rgba(0, 109, 255, 0.9);
+    padding: 0.25rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+
+    margin-bottom: 1rem;
+    box-shadow: 10px 0px 137px 0px rgba(255, 255, 255, 0.25);
+    aspect-ratio: 16 / 9;
+  }
+
+  &__video-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__tag {
+    color: white;
+    justify-content: center;
+    background: $accentColor;
+    font-size: 0.625rem;
+    padding: 0.3rem 0.7rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  &__complete {
+    background: $accentColor;
+    border: none;
+    border-radius: 8px;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.625rem;
+    display: flex;
+    gap: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 1rem;
+  }
+
+  &__back-icon {
+    width: auto;
+    height: 12px;
+  }
+
+  &__note {
+    background: #2e2e2e;
+    height: 11rem;
+    width: 100%;
+    margin-top: 0.8rem;
+    border: none;
+    padding: 1rem;
+    resize: none;
+    border-radius: 4px;
+    caret-color: white;
+
+    &::placeholder {
+      font-family: "Inter";
     }
+  }
 
-    &__num-points {
-        background: $accentColor;
-        padding: 0 0.25rem;
-        border-radius: 4px;
-        
-    }
-
-    &__title {
-        color: whitesmoke;
-        padding-top: 5rem;
-        font-size: 1.125rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    &__videoSection {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    &__video-title {
-        color: whitesmoke;
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.125rem;
-        align-self: flex-start;
-        padding: 1.25rem 0;
-    }
-
-    &__video-container {
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
-
-    &__level {
-        position: absolute;
-        color: whitesmoke;
-        left: 2rem;
-        top: 1rem;
-        
-        background: rgba(0, 109, 255, 0.9);
-        padding: 0.25rem;
-        border-radius: 4px;
-        font-size: 1rem;
-        
-
-    }
-
-    &__video {
-        width: 100%;
-        height: 100%;
-
-        margin-bottom: 1rem;
-        box-shadow: 10px 0px 137px 0px rgba(255,255,255,0.25);
-        aspect-ratio: 16 / 9;
-    }
-
-    &__video-info {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        padding: 0.5rem 0rem;
-        margin-bottom: 0.75rem;
-    }
-
-    &__tags {
-        display: flex;
-        gap: 0.25rem;
-    }
-
-    &__tag {
-        color: white;
-        justify-content: center;
-        background: $accentColor;
-        font-size: 0.625rem;
-        padding: 0.3rem 0.7rem;
-        display: flex;
-        align-items: center;
-        border-radius: 8px;
-    }
-
-   
-    &__complete {
-        background: $accentColor;
-        border: none;
-        border-radius: 8px;
-        padding: 0.35rem 0.7rem;
-        font-size: 0.625rem;
-        display: flex;
-        gap: 0.5rem;
-        color: white;
-        display: flex;
-        align-items: center;
-    }
-
-    &__icon {
-        width: 1rem;
-    }
-
-     &__note {
-        background: #2E2E2E;
-        height: 11rem;
-        width: 100%;
-        margin-top: 2rem;
-        border: none;
-        padding: 1rem;
-        resize: none;
-        border-radius: 4px;
-        caret-color: white;
-
-        &::placeholder {
-            font-family: "Inter";
-        }
-
-    }
-
-    &__confetti {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-    }
-
+  &__confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
 }

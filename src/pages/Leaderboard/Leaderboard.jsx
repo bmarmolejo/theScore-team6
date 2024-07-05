@@ -61,7 +61,7 @@ const Leaderboard = () => {
 </section>
 <section>
     <h2>Top Scores</h2>
-    <div className="ranking__card-wrapper">
+    <div className="ranking__card-wrapper--selected">
         <div>
             <p>4.</p>
         </div>
@@ -69,6 +69,44 @@ const Leaderboard = () => {
             <p>Current rank</p>
             <h2>1,034,344 Points</h2>
             <p>You contributed 200pts </p>
+        </div>
+        <div>
+            <img src={star}/>
+        </div>
+    </div>
+</section>
+<section>
+<div className="ranking__card-wrapper">
+        <div>
+            <p>5.</p>
+        </div>
+        <div>
+            <p>Team Crushers</p>
+            <h2>34,344 Points</h2>
+        </div>
+        <div>
+            <img src={star}/>
+        </div>
+    </div>
+    <div className="ranking__card-wrapper">
+        <div>
+            <p>6.</p>
+        </div>
+        <div>
+            <p>Team Eagles</p>
+            <h2>4,344 Points</h2>
+        </div>
+        <div>
+            <img src={star}/>
+        </div>
+    </div>
+    <div className="ranking__card-wrapper">
+        <div>
+            <p>7.</p>
+        </div>
+        <div>
+            <p>Team Bears</p>
+            <h2>344 Points</h2>
         </div>
         <div>
             <img src={star}/>

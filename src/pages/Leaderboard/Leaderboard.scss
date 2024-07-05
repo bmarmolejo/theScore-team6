@@ -101,10 +101,20 @@ p{
 &__card-wrapper{
     display: flex;
     flex-direction: row;
+    background-color: rgba(57, 60, 66, 0.8);
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 8px 0px;
+}
+&__card-wrapper--selected{
+    display: flex;
+    flex-direction: row;
     background-color: rgba(0, 109, 255, 0.55);
     align-items: center;
     gap: 16px;
     border-radius: 8px;
-    padding: 8px;
+    padding: 16px;
 }
 }

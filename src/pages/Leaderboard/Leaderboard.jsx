@@ -75,7 +75,7 @@ const Leaderboard = () => {
                         <div>
                             <p>4.</p>
                         </div>
-                        <div>
+                        <div className="ranking__card--grow">
                             <p>Current rank</p>
                             <h2>1,034,344 Points</h2>
                             <p className="ranking__card--accent-color-typeface">You contributed 200pts </p>
@@ -90,8 +90,8 @@ const Leaderboard = () => {
                         <div>
                             <p>5.</p>
                         </div>
-                        <div className="ranking__card-right-div">
-                            <div>
+                        <div className="ranking__card-right-div ranking__card--grow">
+                            <div className="ranking__card--grow">
                                 <p>Atlanta Hawks</p>
                                 <h2>34,344 Points</h2>
                             </div>
@@ -101,13 +101,13 @@ const Leaderboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="ranking__card-wrapper">
+                    <div className="ranking__card-wrapper ranking__card--grow">
                         <div>
                             <p>6.</p>
                         </div>
-                        <div className="ranking__card-right-div">
+                        <div className="ranking__card-right-div ranking__card--grow">
 
-                            <div>
+                            <div className="ranking__card--grow">
                                 <p>Portland Blazers</p>
                                 <h2>4,344 Points</h2>
                             </div>
@@ -125,8 +125,8 @@ const Leaderboard = () => {
                         </div>
 
 
-                        <div className="ranking__card-right-div">
-                            <div>
+                        <div className="ranking__card-right-div ranking__card--grow">
+                            <div className="ranking__card--grow">
                                 <p>Washington Wizards</p>
                                 <h2>344 Points</h2>
                             </div>

@@ -33,25 +33,24 @@ function WorkoutPage() {
     if (buttonText === "Workout Complete" && iconImg === circleCheck) {
       setButtonText("Mark Complete");
       setIconImg(circleIcon);
-      setTimeout(() => setShowConfetti(false), 2500);
-      setShowConfetti(false);
-      setStyles(null);
+      setStyles({});
       setPoints(0);
     } else {
       setButtonText("Workout Complete");
       setIconImg(circleCheck);
       setShowConfetti(true);
-      let styleValues = {
+      setStyles({
         background:
           "linear-gradient(100deg, hsla(214, 100%, 50%, 1) 0%, hsla(186, 97%, 53%, 1) 100%)",
-      };
-      setStyles(styleValues);
+      });
       setPoints(32);
+      setTimeout(() => setShowConfetti(false), 1000);
     }
   }
+
   return (
     <section className="workout-page">
-      <div class="workout-page__header">
+      <div className="workout-page__header">
         <Link to="/">
           <img
             src={backArrow}
@@ -92,22 +91,22 @@ function WorkoutPage() {
             type="button"
             onClick={handleClick}
           >
-            {showConfetti && (
-              <div className="workout-page__confetti">
-                <Lottie
-                  options={defaultOptions}
-                  height={400}
-                  width={400}
-                  isStopped={!showConfetti}
-                  isPaused={false}
-                />
-              </div>
-            )}
             {buttonText}
             <span>
               <img src={iconImg} alt="" className="workout-page__icon" />
             </span>
           </button>
+          {showConfetti && (
+            <div className="workout-page__confetti">
+              <Lottie
+                options={defaultOptions}
+                height={400}
+                width={400}
+                isStopped={!showConfetti}
+                isPaused={false}
+              />
+            </div>
+          )}
         </div>
 
         <textarea

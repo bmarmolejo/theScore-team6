@@ -46,6 +46,24 @@ const overviewTasks = [
     count: 12,
     growth: 15,
   },
+  {
+    taskName: "Videos",
+    icon: video,
+    count: 5,
+    growth: 10,
+  },
+  {
+    taskName: "Trivias",
+    icon: trivia,
+    count: 8,
+    growth: 20,
+  },
+  {
+    taskName: "Hashtags",
+    icon: hashtag,
+    count: 12,
+    growth: 15,
+  },
 ];
 
 // TaskCard component
@@ -62,6 +80,21 @@ function TaskCard({ taskName, points, link, onClick }) {
 
 // OverviewCard component
 function OverviewCard({ taskName, count, growth, icon }) {
+  return (
+    <div className="card-small">
+      <p className="card-small-title">{taskName}</p>
+      <p className="card-small-icon">
+        <img src={icon} alt="icon" />
+      </p>
+      <p className="card-small-number">{count}</p>
+      <p className="card-small-percentage">
+        <span>
+          <img src={up} alt="up" />
+          {growth}%
+        </span>
+      </p>
+    </div>
+  );
   return (
     <div className="card-small">
       <p className="card-small-title">{taskName}</p>
@@ -153,7 +186,39 @@ function Dashboard() {
           </div>
         </div>
       </section>
+      <section className="overview">
+        <div className="wrapper">
+          <h2>Daily Stats</h2>
+          <div className="grid">
+            {overviewTasks.map(({ icon, taskName, count, growth }) => (
+              <OverviewCard
+                key={taskName}
+                icon={icon}
+                taskName={taskName}
+                count={count}
+                growth={growth}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <section className="top-card">
+        <div className="wrapper">
+          <h2>Tasks</h2>
+          <div className="grid">
+            {taskListData.map((taskData, index) => (
+              <TaskCard
+                key={index}
+                {...taskData}
+                onClick={handleTaskCompletion}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
       <section className="top-card">
         <div className="wrapper">
           <h2>Tasks</h2>

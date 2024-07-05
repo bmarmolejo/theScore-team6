@@ -32,17 +32,17 @@ const Leaderboard = () => {
                             <div className="overview-card__runners-up-wrapper">
                                 <img className="overview-card--runners-up" src={miamiHeat} />
                                 <p>Miami Heat</p>
-                                <p>2nd place</p>
+                                <p className="overview-card__rank--styling">2nd place</p>
                             </div>
                             <div className="overview-card__winner-wrapper">
                                 <img src={detroitPistons} className="overview-card--winner" />
                                 <p>Detroit Pistons</p>
-                                <p>1st place</p>
+                                <p className="overview-card__rank--styling">1st place</p>
                             </div>
                             <div className="overview-card__runners-up-wrapper">
                                 <img className="overview-card--runners-up" src={chicagoBulls} />
                                 <p>Chicago Bulls</p>
-                                <p>3rd place</p>
+                                <p className="overview-card__rank--styling">3rd place</p>
                             </div>
                         </div>
 
@@ -78,7 +78,7 @@ const Leaderboard = () => {
                         <div>
                             <p>Current rank</p>
                             <h2>1,034,344 Points</h2>
-                            <p>You contributed 200pts </p>
+                            <p className="ranking__card--accent-color-typeface">You contributed 200pts </p>
                         </div>
                         <div>
                             <img src={teamLogo} className="ranking--logo-resize"/>

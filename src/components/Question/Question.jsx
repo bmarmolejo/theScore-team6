@@ -6,13 +6,11 @@ const Question = ({ question, handleAnswerSelected }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleOptionClick = (option) => {
-    console.log("option", option);
     setSelectedOption(option);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("selectedOption", selectedOption);
 
     if (selectedOption) {
       handleAnswerSelected(selectedOption);

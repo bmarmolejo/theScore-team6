@@ -15,7 +15,7 @@ function App() {
           <Route path="/points" element={<Points />} />
           <Route path="/prize" element={<PrizePage />} />
           <Route path="/workout" element={<WorkoutPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
       </BrowserRouter>

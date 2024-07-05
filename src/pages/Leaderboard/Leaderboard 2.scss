@@ -16,17 +16,13 @@ body{
 }
 
 h1,h2{
-    font-size: 14px;
+    font-size: 16px;
     color: white;
 }
 
 p{
     font-size: 10px;
     color: white;
-}
-.overview-card__rank--styling{
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.48);
 }
 
 section h2{
@@ -43,7 +39,7 @@ section h2{
 }
 
 .overview-card{
-    height: 30vh;
+    height: 35vh;
     border-radius: 8px;
     background-color: transparent;
     background-position: center;
@@ -57,6 +53,10 @@ section h2{
     color: white; 
     z-index: 99;
 
+    & div{
+        //
+
+    }
     &__title{
         width: 100%;
         display: flex;
@@ -67,7 +67,7 @@ section h2{
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
-        gap: 16px;
+        gap: 8px;
     }
     
     &__runners-up-wrapper, &__winner-wrapper{
@@ -112,18 +112,8 @@ section h2{
     align-items: center;
     gap: 16px;
     border-radius: 8px;
-    align-items: center;
     padding: 8px 16px;
     margin: 8px 0px;
-}
-&__card--accent-color-typeface{
-    color: #F9F9C1 ;
-}
-
-&__card-right-div{
-    display: flex;
-    gap: 16px;
-    align-items: center;
 }
 
 &__card-wrapper--selected{
@@ -134,10 +124,5 @@ section h2{
     gap: 16px;
     border-radius: 8px;
     padding: 16px;
-}
-
-&--logo-resize{
-    height: 32px;
-    width: 32px;
 }
 }

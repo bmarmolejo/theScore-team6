@@ -1,0 +1,104 @@
+@use "../../styles/partials/globals";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+
+.prize {
+    background-color: $bgColor;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    color: $textcolor;
+  
+    &__nav {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+
+      &--icon {
+        width: auto;
+        height: 12px;
+        position: absolute;
+        left: 20px;
+        top: 40px;
+      }
+
+      &--title {
+        font-size: 16px;
+        font-weight: 700;
+        opacity: 0.5;
+        padding: 0.9375rem;
+      }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        padding-top: 0;
+        padding-bottom: 1.3125rem;
+    }
+
+    &__team-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid $accentColor;
+        width: 148px;
+        height: 148px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        position: absolute;
+        width: 181px;
+        height: 181px;
+      }
+
+    &__result {
+        width: 201px;
+        background-color: #393c42;
+        border-radius: 8px;
+        height: 3.875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5rem auto;
+        
+        &--text {
+            font-size: 24px;
+            font-weight: 700;
+            color: $textcolor;
+        }
+      }
+
+    &__rank {
+        margin-bottom: 2rem;
+
+        &--place {
+            color: rgba($color: $textcolor, $alpha: 0.46);
+        }
+    }
+
+    &__ticket {
+        background-color: #393c42;
+        border-radius: 8px;
+        height: auto;
+        width: 18rem;
+        padding: 1rem 2rem;
+        margin: 2.5rem auto;
+
+        &--icon {
+            margin: 1rem auto;
+        }
+    }
+    
+    &__footer {
+        color: #0064f8;
+        font-weight: 600;
+        padding-bottom: 2rem;
+        background-color: $bgColor;
+        border: transparent;
+      }
+}
